@@ -15,8 +15,10 @@ z = np.array([[3+2*random.random()], [3+2*random.random()], [3+2*random.random()
 
 y = np.dot(X, 2) +z
 
-X = np.array([[410],      [150],      [205],      [370],       [195]])
-y= np.array([[1468680199],[525443902],[654116072],[1095780321],[613688695]])
+c = 1
+
+y = np.array([[410*c],      [150*c],      [205*c],      [370*c],       [195*c]])
+X= np.array([[1468680199],[525443902],[654116072],[1095780321],[613688695]])
 
 reg = LinearRegression().fit(X, y)
 
@@ -28,7 +30,7 @@ print (f"{reg.coef_}, { reg.intercept_}")
 
 plt.scatter(X, y, color="red")
 
-x1 = [[x] for x in np.linspace(0, 500, 10)]
+x1 = [[x] for x in np.linspace(0, 2500000000, 10)]
 y1 = reg.predict(x1)
 
 
