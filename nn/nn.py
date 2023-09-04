@@ -23,8 +23,6 @@ def get_device():
 old_topk = torch.topk
 
 
-
-
 def my_topk(inp: torch.Tensor, k: int, dim=None, largest=True, sorted=True, out=None):
     if k <= 16:
         return old_topk(inp,k,dim,largest,sorted,out)
